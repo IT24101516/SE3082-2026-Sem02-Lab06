@@ -1,1 +1,3 @@
+#pragma omp single guarantees that the block of code will be executed by one and only one thread among all the threads present in the parallel region. There were four threads in total in this case, however, only one thread executes the statement inside the single construct. Thread 1 was responsible for executing the single construct hence the statements "Inside Single # 1" and "Exiting Single" appear just once. The other threads simply bypass the single construct and move ahead.
 
+The thread which executes the single construct is not always guaranteed to be thread 0 and depends on the thread reaching the construct.
