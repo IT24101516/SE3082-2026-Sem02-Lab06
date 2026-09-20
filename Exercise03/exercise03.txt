@@ -1,1 +1,2 @@
-
+Because this pragma tells the compiler that the block will be run by master thread only and the master thread is thread 0. All the other threads bypass the master block and proceed further with their tasks.
+Unlike single directive, the master directive doesn’t impose an implicit barrier on completion of the block.
