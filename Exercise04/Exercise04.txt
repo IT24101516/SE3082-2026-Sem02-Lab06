@@ -1,0 +1,5 @@
+Ex4 Part01
+#pragma omp parallel for distributes iterations of the outer loop, which is r, to all threads available. As r loop contains 5 iterations, hence those 5 iterations will be distributed to all threads. After receiving one iteration of r, a particular thread executes all 10 iterations of inner loop k.
+
+Ex4 Part02
+The function collapse(2) merges both of these nested loops into one iteration space. Here we have total iterations of 5 * 10 = 50, and these 50 iterations can be divided among the threads. It usually results in efficient workload division compared to parallelization of just the 5 outer iterations alone.
